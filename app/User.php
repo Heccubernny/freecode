@@ -1,4 +1,3 @@
-<!-- Avoid whitespace in front of <?php?> to avoid error-->
 <?php
 
 namespace App;
@@ -6,7 +5,9 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+
+class 
+ extends Authenticatable
 {
     use Notifiable;
 
@@ -27,4 +28,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function profile()
+    {
+        # code...
+        return $this->hasOne(Profile::class);
+    }
 }

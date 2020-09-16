@@ -28,7 +28,7 @@
 
                 <div class="container">
                      <!-- Branding Image -->
-                    <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                    <a class="nav bar-brand d-flex align-items-center" href="{{ url('/') }}">
                         <div><img src="/svg/logo.svg" style="height: 20px; border-right: 1px solid #333;" alt="" class="pr-3"></div>
                         <div class="pl-3">EggShell</div>
                         
