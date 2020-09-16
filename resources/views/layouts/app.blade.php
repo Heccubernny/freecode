@@ -8,7 +8,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Eggshell') }}</title>
+        <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -16,24 +23,24 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-default navbar-static-top">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
 
-                <div class="navbar-header">
+                <div class="container">
                      <!-- Branding Image -->
                     <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                        <div><img src="/svg/logo.svg" style="height: 25px; border-right: 1px solid #333;" alt="" class="pr-3"></div>
+                        <div><img src="/svg/logo.svg" style="height: 20px; border-right: 1px solid #333;" alt="" class="pr-3"></div>
                         <div class="pl-3">EggShell</div>
                         
                         
                     </a>
 
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}"><!-- #app-navbar-collapse -->
                         <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        
+                        <span class="navbar-toggler-icon"></span>
                     </button>
 
                    
@@ -54,7 +61,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -80,11 +87,9 @@
         @yield('content')
     </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script><!-- 
     <script src="{{ asset('js/jquery-3.5.1.slim.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
- -->
+
 </body>
 </html>

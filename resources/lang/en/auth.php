@@ -14,6 +14,6 @@ return [
     */
 
     'failed' => 'Incorrect E-mail or Password, please check it again.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'throttle' => 'Too many'. <?php echo {i}?> . 'login attempts. Please try again in :seconds seconds.',
 
 ];
