@@ -1,4 +1,5 @@
- <?php
+<!-- Avoid whitespace in front of <?php?> to avoid error-->
+<?php
 
 namespace App;
 
